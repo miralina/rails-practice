@@ -12,18 +12,18 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :startpoint %><br />
-    <%= f.text_field :startpoint %>
+    <%= f.label "Starting Point" %>
+    <%= f.text_field :startpoint, :placeholder => "City, State" %>
   </div>
   <div class="field">
-    <%= f.label :startdate %><br />
+    <%= f.label "Starting Date & Time" %>
     <%= f.datetime_select :startdate %>
   </div>
   <div class="field">
-    <%= f.label :endpoint %><br />
+    <%= f.label "Destination" %>
     <%= f.text_field :endpoint %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit 'Create New Trip', :class => 'btn btn-primary' %>
   </div>
 <% end %>
