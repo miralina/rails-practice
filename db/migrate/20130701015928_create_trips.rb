@@ -4,6 +4,7 @@ class CreateTrips < ActiveRecord::Migration
       t.string :startpoint
       t.datetime :datetime
       t.string :endpoint
+      t.string :name
 
       t.timestamps
     end

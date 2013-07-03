@@ -1,17 +1,13 @@
 %h1 All Trips
-
-
-  %@trips.each do |trip| 
-
-    %ul
-      %li Starting Point: trip.startpoint
-      %li Starting Date / Time: trip.startdate
-      %li Destination: trip.endpoint 
-      = link_to 'Show', trip 
-      = link_to 'Edit', edit_trip_path(trip) 
-      = link_to 'Delete', trip, method: :delete, data: { confirm: 'Are you sure?' } 
-  
-  %end 
-
-
-%link_to 'New Trip', new_trip_path, :class => "btn btn-primary"
+- @trips.each do |trip|
+  %ul
+    %li
+      Starting Point: #{trip.startpoint}
+    %li
+      Starting Date / Time: #{trip.startdate}
+    %li
+      Destination: #{trip.endpoint}
+    = link_to 'Show', trip
+    = link_to 'Edit', edit_trip_path(trip)
+    = link_to 'Delete', trip, method: :delete, data: { confirm: 'Are you sure?' }
+= link_to 'New Trip', new_trip_path, :class => "btn btn-primary"
